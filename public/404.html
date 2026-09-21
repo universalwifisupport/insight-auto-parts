@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Insight Auto Part | Premium Automotive Parts</title>
+    <script>
+      // GitHub Pages SPA routing fix.
+      // When GitHub Pages returns a 404, this page is served.
+      // We encode the current path into the query string and redirect
+      // back to the root, where the main app picks it up and routes correctly.
+      var l = window.location;
+      l.replace(
+        l.protocol +
+          "//" +
+          l.hostname +
+          (l.port ? ":" + l.port : "") +
+          "/?/" +
+          l.pathname.slice(1).replace(/&/g, "~and~") +
+          (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+          l.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
