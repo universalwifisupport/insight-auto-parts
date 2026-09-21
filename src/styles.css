@@ -177,6 +177,25 @@
     letter-spacing: 0.16em;
   }
 
+  .marquee-track {
+    animation: marquee-scroll 14s linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+    }
+  }
+
+  @keyframes marquee-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
   .field-label {
     display: block;
     margin-bottom: 0.375rem;

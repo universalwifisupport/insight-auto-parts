@@ -36,6 +36,7 @@ export type Product = {
 export const PHONE_NUMBER = "(888) 566-8927";
 export const PHONE_HREF = "tel:+18885668927";
 export const BRAND_NAME = "Insight Auto Part";
+export const ADDRESS = "96-10 57th Avenue, Corona, NY 11368, USA";
 
 export const categories = [
   {

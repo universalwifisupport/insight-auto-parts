@@ -88,21 +88,27 @@ const processSteps = [
 const testimonials = [
   {
     quote:
-      "Called about a short block for a boosted build — they walked through ring gap and bearing clearances before I even paid. That kind of fitment check is rare.",
-    name: "R. Delgado",
-    role: "Independent performance shop",
+      "I purchased a used transmission for my Chevrolet Silverado, and the entire experience exceeded my expectations. The transmission was well packaged, arrived safely, and fit exactly as promised. What really stood out was how carefully the team confirmed fitment before shipping. If you're looking for reliable OEM, used, or aftermarket parts, these guys know what they're doing.",
+    name: "David Collins",
+    role: "Charlotte, North Carolina",
   },
   {
     quote:
-      "Transfer case arrived exactly as described, inspected and ready to bolt in. Saved us a full day versus sourcing used.",
-    name: "M. Okafor",
-    role: "Fleet maintenance lead",
+      "Finding the correct engine wiring harness for my vehicle wasn't easy, but Edward at Insight Auto Parts tracked down the exact OEM replacement I needed. The part arrived quickly, was in excellent condition, and plugged in without any modifications. Outstanding customer service and genuine knowledge of auto parts.",
+    name: "Robert Jenkins",
+    role: "Dallas, Texas",
   },
   {
     quote:
-      "First time ordering a crate engine over the phone and it was the smoothest part of the whole build. Dispatched the same afternoon.",
-    name: "J. Whitfield",
-    role: "Private garage builder",
+      "I ordered an aftermarket A/C compressor for my Honda Accord and was impressed with the quality. The team confirmed compatibility before shipping, and the installation was completely hassle-free. The price was much better than local auto parts stores, and the fit was perfect. I'll definitely be ordering from Insight Auto Parts again.",
+    name: "Sarah Mitchell",
+    role: "Tampa, Florida",
+  },
+  {
+    quote:
+      "I was looking for a used OEM front differential for my Ford F-150 and couldn't find the right one locally. Insight Auto Parts verified my VIN before shipping and made sure I received the correct part. It arrived on time, was exactly as described, and fit perfectly. Great communication and excellent service from start to finish.",
+    name: "Michael Turner",
+    role: "Phoenix, Arizona",
   },
 ];
 
@@ -404,7 +410,7 @@ function Index() {
           <h2 className="mt-2 max-w-xl font-display text-3xl text-ink sm:text-4xl">
             Trusted by people who bolt these in themselves.
           </h2>
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {testimonials.map((testimonial) => (
               <figure
                 key={testimonial.name}

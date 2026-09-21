@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, Search, ShoppingBag, X } from "lucide-react";
-import { BRAND_NAME, PHONE_HREF, PHONE_NUMBER } from "@/lib/catalog";
+import { ADDRESS, BRAND_NAME, PHONE_HREF, PHONE_NUMBER } from "@/lib/catalog";
 import { useCart } from "@/lib/cart-context";
 
 function LogoMark({ dark = false }: { dark?: boolean }) {
@@ -11,6 +11,24 @@ function LogoMark({ dark = false }: { dark?: boolean }) {
     >
       <Search size={18} strokeWidth={2.5} className={dark ? "text-ink" : "text-accent"} />
     </span>
+  );
+}
+
+const ANNOUNCEMENTS = ["Up to 15% discount on select in-stock parts — call now"];
+
+function AnnouncementBar() {
+  const items = Array.from({ length: 8 }).flatMap(() => ANNOUNCEMENTS);
+  return (
+    <div className="overflow-hidden bg-accent text-ink">
+      <div className="marquee-track flex w-max min-h-8 items-center gap-10 whitespace-nowrap py-1.5 font-cond text-[11px] font-bold uppercase tracking-[0.14em] sm:text-xs">
+        {items.map((text, index) => (
+          <span key={index} className="flex items-center gap-10">
+            <span>{text}</span>
+            <span aria-hidden="true">✦</span>
+          </span>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -27,6 +45,7 @@ export function SiteHeader() {
 
   return (
     <>
+      <AnnouncementBar />
       <div className="bg-ink text-paper">
         <div className="site-width flex min-h-9 items-center justify-between gap-4 py-2 font-cond text-[11px] uppercase tracking-[0.16em] sm:text-xs">
           <span className="flex items-center gap-2">
@@ -131,6 +150,7 @@ export function SiteFooter() {
             Precision automotive parts for professional workshops and private garages. Temporary
             identity, ready to be replaced.
           </p>
+          <p className="mt-4 max-w-[38ch] text-sm leading-6 text-paper/60">{ADDRESS}</p>
           <a
             href={PHONE_HREF}
             className="mt-5 inline-flex font-cond text-sm font-semibold uppercase tracking-[0.1em] text-accent transition-colors hover:text-paper"

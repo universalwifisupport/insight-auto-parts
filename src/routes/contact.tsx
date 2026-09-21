@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { LeadForm } from "@/components/lead-form";
-import { PHONE_HREF, PHONE_NUMBER } from "@/lib/catalog";
+import { ADDRESS, PHONE_HREF, PHONE_NUMBER } from "@/lib/catalog";
 
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
@@ -34,6 +34,12 @@ function ContactPage() {
               <p className="mt-2 text-sm leading-6 text-ink/60">
                 Mon–Sat, same-day dispatch on in-stock orders.
               </p>
+            </div>
+            <div className="border border-line p-6">
+              <h2 className="font-cond text-sm font-bold uppercase tracking-[0.1em] text-steel">
+                Address
+              </h2>
+              <p className="mt-2 font-display text-lg text-ink">{ADDRESS}</p>
             </div>
             <div className="border border-line p-6">
               <h2 className="font-cond text-sm font-bold uppercase tracking-[0.1em] text-steel">
